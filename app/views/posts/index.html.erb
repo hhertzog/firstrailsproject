@@ -1,0 +1,34 @@
+<% if user_signed_in? %>
+
+  <table class="table table-striped table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>Post Title</th>
+        <th>Body</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @posts.each do |post| %>
+      <% if post.user == current_user %>
+        <tr>
+          <td>
+            <%= link_to post.title + ' ' + post.item, post %>
+          </td>
+          <td><%= post.body %></td>
+
+          <td><%= link_to 'Delete', post,  method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-small btn-outline-danger" %></td>
+
+        </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Post', new_post_path, class:"btn btn-secondary" %>
+<% else %>
+  <h1>Hello World!</h1>
+<% end %>
