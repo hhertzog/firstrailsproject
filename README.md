@@ -1,24 +1,3 @@
-# README
+# My first Rails project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Hello! My name is Hannah. This project was made while following the Codemy.com Ruby on Rails tutorial video ( https://www.youtube.com/watch?v=fmyvWz5TUWg ). I'm studying the Rails language so that I can complete the Daangn Market coding test!
