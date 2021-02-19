@@ -11,7 +11,7 @@
 
     <tbody>
       <% @posts.each do |post| %>
-      <% if (post.user == current_user) && ((post.body.include? "show!") || (post.title.include? "show!")) %>
+      <% if post.user == current_user %>
         <tr>
           <td>
             <%= link_to post.title + ' ' + post.item, post %>
@@ -28,7 +28,7 @@
 
   <br>
 
-  <%= link_to 'New Post', new_post_path, class:"btn btn-secondary" %>
+  <%= link_to 'New Post', new_post_path, class:"btn btn-outline-secondary" %>
 <% else %>
   <h1>Hello World!</h1>
 <% end %>
