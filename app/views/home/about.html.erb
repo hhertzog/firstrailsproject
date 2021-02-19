@@ -1,5 +1,9 @@
 <h1>About me</h1>
 
 <p>
-	<%= @about_me %><br/>
+	<% if @about_me.include? "Hannah" %>
+		My name is Hannah!
+	<% else %>
+		My name is NOT Hannah.
+	<% end %>
 </p>
